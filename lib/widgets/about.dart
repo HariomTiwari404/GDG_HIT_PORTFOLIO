@@ -23,7 +23,7 @@ class AboutSection extends StatelessWidget {
         children: [
           Text(
             'ABOUT',
-            style: GoogleFonts.epilogue(
+            style: GoogleFonts.poppins(
               fontSize: titleFontSize,
               fontWeight: FontWeight.w400,
             ),
@@ -35,7 +35,7 @@ class AboutSection extends StatelessWidget {
             'Proficient in hands-on electronic circuit design and implementation. Seeking an entry-level position '
             'to apply technical skills and contribute to innovative projects, while continuously learning and growing '
             'within a dynamic organization.',
-            style: TextStyle(fontSize: bodyFontSize, height: 1.75),
+            style: GoogleFonts.poppins(fontSize: bodyFontSize, height: 1.75),
           ),
         ],
       ),

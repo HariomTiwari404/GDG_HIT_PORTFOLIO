@@ -26,7 +26,7 @@ class FooterLeft extends StatelessWidget {
         children: [
           Text(
             "Let's work together",
-            style: GoogleFonts.epilogue(
+            style: GoogleFonts.poppins(
               fontSize: titleFontSize,
               fontWeight: FontWeight.bold,
             ),

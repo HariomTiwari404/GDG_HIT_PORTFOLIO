@@ -56,10 +56,13 @@ class FooterRight extends StatelessWidget {
         fillColor: Colors.grey[100],
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
-          borderSide: BorderSide(color: Colors.grey.shade300),
+          borderSide: BorderSide(
+            color: Colors.grey.withOpacity(0.1),
+            width: 1,
+          ),
         ),
       ),
-      style: TextStyle(fontSize: fontSize),
+      style: GoogleFonts.poppins(fontSize: fontSize),
     );
   }
 
@@ -75,7 +78,7 @@ class FooterRight extends StatelessWidget {
           borderSide: BorderSide(color: Colors.grey.shade300),
         ),
       ),
-      style: TextStyle(fontSize: fontSize),
+      style: GoogleFonts.poppins(fontSize: fontSize),
     );
   }
 }

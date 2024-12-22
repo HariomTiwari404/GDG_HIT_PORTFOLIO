@@ -25,7 +25,7 @@ class SkillsSection extends StatelessWidget {
         children: [
           Text(
             'SKILLS',
-            style: GoogleFonts.epilogue(
+            style: GoogleFonts.poppins(
               fontSize: titleFontSize,
               fontWeight: FontWeight.w400,
             ),

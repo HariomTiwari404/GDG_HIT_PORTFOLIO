@@ -48,7 +48,7 @@ class _ProjectsSectionState extends State<ProjectsSection> {
         children: [
           Text(
             'PROJECTS',
-            style: GoogleFonts.epilogue(
+            style: GoogleFonts.poppins(
               fontSize: titleFontSize,
               fontWeight: FontWeight.w400,
             ),

@@ -1,5 +1,6 @@
 // widgets/image_and_skills.dart
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class ImageAndSkills extends StatelessWidget {
   final double screenWidth;
@@ -67,7 +68,8 @@ class ImageAndSkills extends StatelessWidget {
   Widget _skillText(String text, double fontSize) {
     return Text(
       text,
-      style: TextStyle(fontSize: fontSize, fontWeight: FontWeight.bold),
+      style:
+          GoogleFonts.poppins(fontSize: fontSize, fontWeight: FontWeight.w600),
     );
   }
 }
