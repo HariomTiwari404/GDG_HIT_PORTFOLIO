@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'widgets/about.dart';
 import 'widgets/footer_section.dart';
 import 'widgets/image_and_skills.dart';

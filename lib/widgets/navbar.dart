@@ -50,11 +50,11 @@ class NavBar extends StatelessWidget {
             ],
           ),
         ),
-        Container(
-          margin: EdgeInsets.symmetric(horizontal: paddingHorizontal),
+        Divider(
           height: 1,
-          color: Colors.black.withOpacity(0.2),
-        ),
+          color: Colors.black,
+          thickness: 10,
+        )
       ],
     );
   }
