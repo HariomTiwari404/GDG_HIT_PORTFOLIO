@@ -7,6 +7,7 @@ import 'widgets/projects_section.dart';
 import 'widgets/skills_section.dart';
 import 'widgets/title_section.dart';
 
+
 void main() {
   runApp(PortfolioApp());
 }
@@ -40,7 +41,7 @@ class _PortfolioAppState extends State<PortfolioApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
+      
       home: Scaffold(
         body: LayoutBuilder(
           builder: (context, constraints) {

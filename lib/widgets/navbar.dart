@@ -32,9 +32,10 @@ class NavBar extends StatelessWidget {
               Text(
                 '<HARIOM/>',
                 style: GoogleFonts.poppins(
-                  fontSize: screenWidth > 800
+                  /* fontSize: screenWidth > 800
                       ? screenWidth * 0.025
-                      : screenWidth * 0.05,
+                      : screenWidth * 0.05, */
+                  fontSize: 25,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -51,9 +52,9 @@ class NavBar extends StatelessWidget {
           ),
         ),
         Divider(
-          height: 1,
+          height: 5,
           color: Colors.black,
-          thickness: 10,
+          thickness: 20,
         )
       ],
     );

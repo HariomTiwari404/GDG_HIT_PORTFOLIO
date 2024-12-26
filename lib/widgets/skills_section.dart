@@ -58,7 +58,7 @@ class SkillsSection extends StatelessWidget {
           imagePath,
           height: imageHeight,
         ),
-        SizedBox(height: 10),
+        SizedBox(height: 50),
         Text(
           skillName,
           style: TextStyle(
