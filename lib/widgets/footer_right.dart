@@ -7,75 +7,59 @@ class FooterRight extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double buttonFontSize = screenWidth * 0.018;
-    double buttonPaddingHorizontal = screenWidth * 0.08;
     double fieldFontSize = screenWidth * 0.014;
     double formWidth =
         screenWidth > 800 ? screenWidth * 0.4 : screenWidth * 0.9;
+    double buttonFontSize = screenWidth * 0.018;
 
-    return ConstrainedBox(
-      constraints: BoxConstraints(maxWidth: formWidth),
-      child: Column(
-        children: [
-          _textInputField('Name', fieldFontSize),
-          SizedBox(height: screenWidth * 0.04),
-          _textInputField('Email', fieldFontSize),
-          SizedBox(height: screenWidth * 0.04),
-          _messageInputField(fieldFontSize),
-          SizedBox(height: screenWidth * 0.06),
-          ElevatedButton(
-            onPressed: () {},
-            style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.white,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(12),
+//Without the ConstrainedBox, the Column widget may stretch indefinitely, especially on large screens, leading to unwanted layout behavior
+    return Center(
+      child: SizedBox(
+        width: screenWidth > 800 ? screenWidth * 0.4 : screenWidth * 0.9,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            _buildTextField('Name', fieldFontSize),
+            SizedBox(height: screenWidth * 0.04),
+            _buildTextField('Email', fieldFontSize),
+            SizedBox(height: screenWidth * 0.04),
+            _buildTextField('Type your message here', fieldFontSize,
+                maxLines: 5),
+            SizedBox(height: screenWidth * 0.06),
+            ElevatedButton(
+              onPressed: () {},
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.black,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                padding: EdgeInsets.symmetric(vertical: screenWidth * 0.035),
               ),
-              elevation: 4,
-              padding: EdgeInsets.symmetric(
-                  vertical: screenWidth * 0.035,
-                  horizontal: buttonPaddingHorizontal),
-            ),
-            child: Text(
-              'Submit',
-              style: GoogleFonts.montserrat(
-                fontSize: buttonFontSize,
-                fontWeight: FontWeight.w500,
+              child: Text(
+                'Submit',
+                style: GoogleFonts.montserrat(
+                  fontSize: buttonFontSize,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.white,
+                ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
 
-  Widget _textInputField(String hint, double fontSize) {
+  Widget _buildTextField(String hint, double fontSize, {int maxLines = 1}) {
     return TextField(
+      maxLines: maxLines,
       decoration: InputDecoration(
         hintText: hint,
         filled: true,
-        fillColor: Colors.grey[100],
+        fillColor: Colors.grey[200],
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
-          borderSide: BorderSide(
-            color: Colors.grey.withOpacity(0.1),
-            width: 1,
-          ),
-        ),
-      ),
-      style: GoogleFonts.poppins(fontSize: fontSize),
-    );
-  }
-
-  Widget _messageInputField(double fontSize) {
-    return TextField(
-      maxLines: 5,
-      decoration: InputDecoration(
-        hintText: 'Your message...',
-        filled: true,
-        fillColor: Colors.grey[100],
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(12),
-          borderSide: BorderSide(color: Colors.grey.shade300),
+          borderSide: BorderSide.none,
         ),
       ),
       style: GoogleFonts.poppins(fontSize: fontSize),

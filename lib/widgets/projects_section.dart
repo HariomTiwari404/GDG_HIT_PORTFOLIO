@@ -23,15 +23,19 @@ class _ProjectsSectionState extends State<ProjectsSection> {
     double titleFontSize = widget.screenWidth > 800
         ? widget.screenWidth * 0.05
         : widget.screenWidth * 0.07;
+
     double projectWidth = widget.screenWidth > 1200
         ? widget.screenWidth * 0.2
         : widget.screenWidth > 800
             ? widget.screenWidth * 0.3
             : widget.screenWidth * 0.45;
+
     double projectHeight = projectWidth;
+
     double projectNameFontSize = widget.screenWidth > 800
         ? widget.screenWidth * 0.02
         : widget.screenWidth * 0.03;
+
     double techStackFontSize = widget.screenWidth > 800
         ? widget.screenWidth * 0.013
         : widget.screenWidth * 0.02;
